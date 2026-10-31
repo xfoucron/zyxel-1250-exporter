@@ -1,0 +1,23 @@
+version: "2"
+
+linters:
+  enable:
+    - bodyclose
+    - errorlint
+    - gocritic
+    - gosec
+    - misspell
+    - noctx
+    - perfsprint
+    - unconvert
+    - usestdlibvars
+  exclusions:
+    rules:
+      - path: (_test\.go|zyxeltest/)
+        linters:
+          - gosec
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
